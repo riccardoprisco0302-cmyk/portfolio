@@ -118,6 +118,20 @@
     border:1px solid var(--line);border-left:3px solid var(--a2);border-radius:12px;
     padding:14px 18px;margin:18px 0 4px;color:var(--txt);font-size:15px}
   .note b{color:var(--txt)}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 6px}
+  .facts>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .facts b{display:block;color:var(--a2);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+  .facts span{color:var(--txt);font-size:14px}
+  .tl{border-left:2px solid var(--line);margin:8px 0 0;padding-left:22px}
+  .tli{position:relative;margin:16px 0}
+  .tli::before{content:"";position:absolute;left:-29px;top:6px;width:11px;height:11px;border-radius:50%;background:linear-gradient(90deg,var(--a1),var(--a2))}
+  .tld{color:var(--a2);font-size:13px;font-weight:700}
+  .tli b{display:block;color:var(--txt);margin-top:2px}
+  .tli p{margin:4px 0 0;font-size:14px}
+  .kpi2{text-align:center}
+  .kpi2 b{display:block;font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em;
+    background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .kpi2 span{color:var(--muted);font-size:13px}
   .shot{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);margin-top:22px;display:block;
     box-shadow:0 24px 60px -28px rgba(0,0,0,.85)}
   .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
@@ -189,6 +203,7 @@
     <button id="burger" class="burger" aria-label="Apri menu" aria-expanded="false">&#9776;</button>
     <ul>
       <li><a href="#about">Profilo</a></li>
+      <li><a href="#esperienze">Esperienze</a></li>
       <li><a href="#projects">Progetto</a></li>
       <li><a href="#cv">CV</a></li>
       <li><a href="#numbers">Numeri</a></li>
@@ -232,11 +247,31 @@
     <h2>Profilo</h2>
     <p class="lead">Trasformo processi ripetitivi in sistemi automatici e affidabili. Uso Python, API,
       scraping, modelli AI e strumenti di sistema — con attenzione a qualità, costi e robustezza.</p>
+    <div class="facts">
+      <div><b>Sede</b><span>Como (IT), vicino al Ticino</span></div>
+      <div><b>Disponibilità</b><span>Immediata · full-time</span></div>
+      <div><b>Lingue</b><span>Italiano madrelingua · Inglese B1</span></div>
+      <div><b>Cerco</b><span>Automazione · IT · sviluppo</span></div>
+    </div>
     <div class="tagrow">
       <span class="tag">Python</span><span class="tag">Automazione</span><span class="tag">Web scraping</span>
       <span class="tag">API REST</span><span class="tag">AI / LLM (Gemini)</span><span class="tag">SMTP / IMAP</span>
       <span class="tag">HTML → PDF</span><span class="tag">Linux / systemd</span><span class="tag">Dashboard</span>
     </div>
+  </div>
+</section>
+
+<section id="esperienze" class="reveal">
+  <div class="wrap">
+    <p class="kicker">Percorso</p>
+    <h2>Esperienze</h2>
+    <div class="tl">
+      <div class="tli"><span class="tld">2025 – oggi</span><div><b>Sviluppatore Software &amp; Automazione (autonomo)</b><p>Bot, automazioni, integrazione AI, web scraping e dashboard.</p></div></div>
+      <div class="tli"><span class="tld">2025 – 2026</span><div><b>Tecnico hardware PC / Smartphone</b><p>Diagnostica, riparazione, assemblaggio di precisione e collaudo.</p></div></div>
+      <div class="tli"><span class="tld">2021</span><div><b>Operatore di linea e impianti (automotive)</b><p>Conduzione impianti, controllo qualità, lavoro su turni.</p></div></div>
+      <div class="tli"><span class="tld">2020 – 2021</span><div><b>Addetto logistico e magazzino (GDO)</b><p>Carico/scarico, stoccaggio, controllo scadenze.</p></div></div>
+    </div>
+    <p class="lead" style="margin-top:18px">Il CV completo è scaricabile dal pulsante "Scarica CV" o nella sezione CV.</p>
   </div>
 </section>
 
@@ -310,20 +345,12 @@
     <p class="kicker">I numeri</p>
     <h2>Il bot in cifre</h2>
     <div class="grid">
-      <div class="card"><h3>Copertura</h3>
-        <div class="barlist">
-          <div class="r"><span>Annunci (job-room, careerjet, jobs.ch)</span><span>3 fonti</span><div class="bar"><i data-w="80"></i></div></div>
-          <div class="r"><span>Feed tech svizzeri (swissdevjobs, itjobs)</span><span>2 feed</span><div class="bar"><i data-w="70"></i></div></div>
-          <div class="r"><span>Candidature spontanee (DB + web-query)</span><span>2 vie</span><div class="bar"><i data-w="90"></i></div></div>
-        </div>
-      </div>
-      <div class="card"><h3>Qualità &amp; automazione</h3>
-        <div class="barlist">
-          <div class="r"><span>Pre-check anti-errori (oggetto/corpo/CV)</span><span>sempre attivo</span><div class="bar"><i data-w="100"></i></div></div>
-          <div class="r"><span>CV tagliato sull'annuncio (ATS)</span><span>ogni invio</span><div class="bar"><i data-w="95"></i></div></div>
-          <div class="r"><span>Tracciamento risposte</span><span>automatico</span><div class="bar"><i data-w="85"></i></div></div>
-        </div>
-      </div>
+      <div class="card kpi2"><b>343</b><span>candidature gestite</span></div>
+      <div class="card kpi2"><b>330</b><span>aziende contattate</span></div>
+      <div class="card kpi2"><b>5</b><span>fonti annunci integrate</span></div>
+      <div class="card kpi2"><b>65</b><span>settori monitorati</span></div>
+      <div class="card kpi2"><b>4</b><span>caselle in rotazione</span></div>
+      <div class="card kpi2"><b>100%</b><span>automatico end-to-end</span></div>
     </div>
     <ul class="clean">
       <li><b>Sempre in funzione</b>: gira pianificato, controlla gli errori e si riprende da solo.</li>
@@ -377,7 +404,7 @@
       </div>
       <div>
         <p class="ftitle">Navigazione</p>
-        <a href="#about">Profilo</a><a href="#projects">Progetto</a><a href="#cv">CV</a><a href="#numbers">Numeri</a><a href="#competenze">Competenze</a>
+        <a href="#about">Profilo</a><a href="#esperienze">Esperienze</a><a href="#projects">Progetto</a><a href="#cv">CV</a><a href="#numbers">Numeri</a><a href="#competenze">Competenze</a>
       </div>
       <div>
         <p class="ftitle">Contatti</p>
