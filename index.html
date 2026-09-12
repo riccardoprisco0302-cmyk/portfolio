@@ -38,7 +38,15 @@
   .nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
   .nav a{color:var(--muted);font-size:14.5px;font-weight:600}
   .nav a:hover{color:var(--txt)}
-  @media(max-width:720px){.nav ul{display:none}}
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:10px;width:42px;height:36px;font-size:18px;cursor:pointer}
+  @media(max-width:720px){
+    .burger{display:block}
+    .nav{position:relative}
+    .nav ul{position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:0;display:none;
+      background:rgba(6,9,15,.98);border-bottom:1px solid var(--line);padding:6px 22px 12px}
+    .nav ul.open{display:flex}
+    .nav ul li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  }
 
   /* HERO */
   .hero{padding:80px 0 60px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(6,9,15,.88),rgba(6,9,15,.975) 74%),url('hero.jpg') center/cover no-repeat}
@@ -75,7 +83,7 @@
   .photoWrap{position:relative;justify-self:center;width:min(340px,72vw);aspect-ratio:1;order:-1}
   @media(max-width:860px){.photoWrap{order:-1;margin-bottom:8px}}
   .photoWrap::before{content:"";position:absolute;inset:-6px;border-radius:50%;
-    background:conic-gradient(from 0deg,var(--a1),var(--a2),var(--a3),var(--a4),var(--a1));animation:spin 8s linear infinite;filter:blur(1px)}
+    background:conic-gradient(from 0deg,var(--a1),var(--a2),var(--a3),var(--a4),var(--a1));filter:blur(1px)}
   @keyframes spin{to{transform:rotate(360deg)}}
   .photoWrap::after{content:"";position:absolute;inset:-30px;border-radius:50%;
     background:radial-gradient(closest-side,rgba(79,157,255,.35),transparent);z-index:-1;animation:glow 4s ease-in-out infinite}
@@ -159,6 +167,13 @@
   .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
   a:focus-visible,.btn:focus-visible,.cbox:focus-visible{outline:2px solid var(--a2);outline-offset:3px;border-radius:12px}
   @media(max-width:860px){.home .cta{justify-content:center}}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+  @media(max-width:720px){.fgrid{grid-template-columns:1fr;gap:18px}}
+  .ftitle{color:var(--txt);font-weight:700;margin:0 0 8px;font-size:14px}
+  .fgrid a{display:block;color:var(--muted);margin:5px 0;font-size:14px}
+  .fgrid a:hover{color:var(--txt)}
+  .fnote{color:var(--muted);font-size:14px;margin:0;max-width:340px}
+  .fbottom{border-top:1px solid var(--line);margin-top:24px;padding-top:16px;color:var(--muted);font-size:13px;text-align:center}
 </style>
 </head>
 <body>
@@ -167,6 +182,7 @@
 <nav>
   <div class="wrap nav">
     <div class="brand"><img src="logo.png" alt="" class="brandlogo">Riccardo&nbsp;<span>Prisco</span></div>
+    <button id="burger" class="burger" aria-label="Apri menu" aria-expanded="false">&#9776;</button>
     <ul>
       <li><a href="#about">Profilo</a></li>
       <li><a href="#projects">Progetto</a></li>
@@ -183,8 +199,7 @@
   <canvas id="net"></canvas>
   <div class="wrap heroGrid">
     <div>
-      <span class="badge"><span class="dot"></span> Portfolio · Automazione, Bot &amp; AI</span>
-      <h1>Ciao, sono <span class="grad">Riccardo Prisco</span>.<br>Costruisco bot che lavorano al posto tuo.</h1>
+      <h1><span class="grad">Riccardo Prisco</span>.<br>Costruisco bot che lavorano al posto tuo.</h1>
       <p class="lead">Automazioni end-to-end: ricerca dati, contatti, comunicazione e AI.
         Base a Como, attivo tra Italia e Canton Ticino.</p>
       <div class="cta">
@@ -358,9 +373,24 @@
 </section>
 
 <footer>
-  <div class="wrap foot">
-    <span><img src="logo.png" alt="" class="brandlogo">© <span id="y"></span> Riccardo Prisco — Como (IT) / Canton Ticino (CH)</span>
-    <span>Portfolio statico · nessun tracker · nessuna dipendenza esterna</span>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand" style="margin-bottom:10px"><img src="logo.png" alt="" class="brandlogo">Riccardo&nbsp;<span>Prisco</span></div>
+        <p class="fnote">Bot, automazioni e AI: realizzo sistemi che lavorano al posto tuo.</p>
+      </div>
+      <div>
+        <p class="ftitle">Navigazione</p>
+        <a href="#about">Profilo</a><a href="#projects">Progetto</a><a href="#cv">CV</a><a href="#numbers">Numeri</a><a href="#servizi">Servizi</a>
+      </div>
+      <div>
+        <p class="ftitle">Contatti</p>
+        <a href="mailto:riccardoprisco0302@gmail.com">Email</a>
+        <a href="tel:+393513617528">+39 351 361 7528</a>
+        <a href="https://wa.me/393513617528" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="fbottom">© <span id="y"></span> Riccardo Prisco</div>
   </div>
 </footer>
 
@@ -452,6 +482,11 @@
   }
   window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll();
   if(top) top.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  var burger=document.getElementById('burger'), navul=document.querySelector('.nav ul');
+  if(burger && navul){
+    burger.addEventListener('click',function(){ var o=navul.classList.toggle('open'); burger.setAttribute('aria-expanded', o?'true':'false'); });
+    navul.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ navul.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }); });
+  }
 })();
 </script>
 </body>
