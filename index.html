@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script>document.documentElement.className+=' js';</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riccardo Prisco — Portfolio · Automazione &amp; AI</title>
+<meta name="description" content="Portfolio di Riccardo Prisco: bot, automazioni, scraping, integrazione AI. Progetto di punta: Bot API Annunci per il Canton Ticino.">
+<meta name="theme-color" content="#06090f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riccardo Prisco — Portfolio · Automazione &amp; AI">
+<meta property="og:description" content="Costruisco bot e automazioni end-to-end: ricerca dati, contatti, comunicazione e AI.">
+<meta property="og:image" content="social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+  :root{
+    --bg:#06090f; --panel:#0f1726; --card:#131d30; --txt:#eaf1fb; --muted:#93a4bd;
+    --line:#22314b; --a1:#4f9dff; --a2:#22d3a6; --a3:#a78bfa; --a4:#f472b6; --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(1200px 700px at 70% -10%,rgba(79,157,255,.10),transparent 60%),var(--bg);
+    color:var(--txt);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:var(--a1);text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--a2);margin:0 0 10px;font-weight:800}
+  h2{font-size:clamp(24px,3.6vw,36px);margin:0 0 16px;letter-spacing:-.02em}
+  p{color:var(--muted)}
+  section{padding:76px 0;position:relative}
+
+  nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(12px);
+    background:rgba(6,9,15,.72);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:800;letter-spacing:-.01em;font-size:17px}
+  .brand span{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+  .nav a{color:var(--muted);font-size:14.5px;font-weight:600}
+  .nav a:hover{color:var(--txt)}
+  @media(max-width:720px){.nav ul{display:none}}
+
+  /* HERO */
+  .hero{padding:80px 0 60px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(6,9,15,.88),rgba(6,9,15,.975) 74%),url('hero.jpg') center/cover no-repeat}
+  .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.32;pointer-events:none;z-index:0}
+  .blob.b1{width:460px;height:460px;background:var(--a1);top:-140px;left:-100px;animation:float 15s ease-in-out infinite}
+  .blob.b2{width:420px;height:420px;background:var(--a2);top:-80px;right:-80px;animation:float 19s ease-in-out infinite reverse}
+  .blob.b3{width:320px;height:320px;background:var(--a3);bottom:-180px;left:42%;opacity:.3;animation:float 17s ease-in-out infinite}
+  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  .brand{display:flex;align-items:center}
+  .brandlogo{width:26px;height:26px;border-radius:7px;margin-right:8px}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(28px)}}
+  .heroGrid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center}
+  @media(max-width:860px){.heroGrid{grid-template-columns:1fr;gap:30px;text-align:center}}
+
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--a2);
+    border:1px solid var(--line);padding:7px 13px;border-radius:999px;background:rgba(34,211,166,.06);margin-bottom:20px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--a2);box-shadow:0 0 12px var(--a2);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{font-size:clamp(31px,5.4vw,56px);line-height:1.08;margin:0 0 16px;letter-spacing:-.03em}
+  h1 .grad{background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));background-size:220% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+  @keyframes shine{to{background-position:220% center}}
+  .lead{font-size:clamp(16px,2.1vw,19px);max-width:620px;margin:0 0 26px}
+  @media(max-width:860px){.lead{margin-inline:auto}}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:860px){.cta{justify-content:center}}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:13px;font-weight:700;
+    border:1px solid var(--line);background:var(--panel);color:var(--txt);transition:transform .15s,border-color .2s}
+  .btn:hover{border-color:var(--a1);transform:translateY(-1px)}
+  .btn.primary{background:linear-gradient(90deg,var(--a1),#3b82f6);border:0;color:#041020}
+  .btn.primary:hover{filter:brightness(1.08)}
+
+  /* FOTO */
+  .photoWrap{position:relative;justify-self:center;width:min(340px,72vw);aspect-ratio:1}
+  .photoWrap::before{content:"";position:absolute;inset:-6px;border-radius:50%;
+    background:conic-gradient(from 0deg,var(--a1),var(--a2),var(--a3),var(--a4),var(--a1));animation:spin 8s linear infinite;filter:blur(1px)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .photoWrap::after{content:"";position:absolute;inset:-30px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(79,157,255,.35),transparent);z-index:-1;animation:glow 4s ease-in-out infinite}
+  @keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
+  .photo{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#0b1320;border:4px solid #0a0f18}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle at 50% 38%,transparent 52%,rgba(6,9,15,.55) 100%)}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:40px}
+  .stat{background:linear-gradient(180deg,#101a2b,rgba(15,23,38,.94));border:1px solid var(--line);
+    border-radius:14px;padding:18px;text-align:center}
+  .stat b{display:block;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.02em;font-weight:800;
+    background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-5px);border-color:#2f4870;box-shadow:0 16px 44px -18px rgba(79,157,255,.5)}
+  .card h3{margin:0 0 8px;font-size:18.5px}
+  .card p{margin:0;font-size:15px}
+  .card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:13px;
+    background:linear-gradient(135deg,rgba(79,157,255,.18),rgba(34,211,166,.18));border:1px solid var(--line)}
+  .card .ic svg{width:21px;height:21px;stroke:var(--a2);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+  .proj{border:1px solid var(--line);border-radius:24px;padding:30px;background:
+    radial-gradient(900px 320px at 8% 0%,rgba(79,157,255,.12),transparent 62%),var(--panel)}
+  .proj h3{font-size:clamp(20px,2.9vw,27px);margin:0 0 10px}
+  .cap{color:var(--muted);font-size:13px;text-align:center;margin:8px 0 0}
+  .shot{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);margin-top:22px;display:block;
+    box-shadow:0 24px 60px -28px rgba(0,0,0,.85)}
+  .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+  .tag{font-size:12.5px;border:1px solid var(--line);background:#0d1626;padding:5px 11px;border-radius:999px;color:#cdd9ec}
+
+  .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:26px 0 6px}
+  @media(max-width:860px){.pipe{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.pipe{grid-template-columns:1fr}}
+  .step{background:linear-gradient(180deg,#0e1828,#0b1320);border:1px solid var(--line);border-radius:14px;padding:15px;text-align:center;position:relative}
+  .step .n{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;font-size:13px;font-weight:800;color:#041020;background:linear-gradient(135deg,var(--a1),var(--a2))}
+  .step b{display:block;font-size:14.5px;margin-bottom:3px}
+  .step span{font-size:12.5px;color:var(--muted);line-height:1.45}
+  .step::after{content:"\2192";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--a1);font-weight:800;z-index:2}
+  .step:last-child::after{content:""}
+  @media(max-width:860px){.step::after{content:""}}
+
+  .bar{height:10px;border-radius:999px;background:#0c1422;border:1px solid var(--line);overflow:hidden;margin-top:6px}
+  .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a1),var(--a2));transition:width 1.4s ease}
+  .barlist{margin-top:18px}
+  .barlist .r{display:flex;justify-content:space-between;font-size:14px;color:var(--txt);margin-top:14px;font-weight:600}
+  .barlist .r span{color:var(--muted);font-weight:500}
+
+  ul.clean{list-style:none;padding:0;margin:14px 0 0}
+  ul.clean li{padding-left:24px;position:relative;margin:8px 0;color:var(--muted);font-size:15px}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:9px;width:8px;height:8px;border-radius:50%;background:linear-gradient(90deg,var(--a1),var(--a2))}
+  ul.clean b{color:var(--txt)}
+
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}
+  .cbox{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:border-color .2s,transform .15s}
+  .cbox:hover{border-color:var(--a1);transform:translateY(-2px)}
+  .cbox .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#0d1626;border:1px solid var(--line);flex:0 0 auto}
+  .cbox svg{width:21px;height:21px;stroke:var(--a2);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .cbox b{display:block;color:var(--txt);font-size:15px}
+  .cbox span{color:var(--muted);font-size:13.5px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 54px;color:var(--muted);font-size:14px;margin-top:10px}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+  html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  html.js .reveal.in{opacity:1;transform:none}
+  #prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:110;background:linear-gradient(90deg,var(--a1),var(--a2));transition:width .12s linear}
+  #top{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+    background:var(--panel);border:1px solid var(--line);color:var(--txt);cursor:pointer;opacity:0;transform:translateY(10px);
+    transition:opacity .25s,transform .25s;z-index:90;font-size:18px;line-height:1}
+  #top.show{opacity:1;transform:none}
+  #top:hover{border-color:var(--a2)}
+  .step{transition:transform .2s,border-color .2s}
+  .step:hover{transform:translateY(-3px);border-color:#2f4870}
+  .card .ic{transition:transform .25s ease}
+  .card:hover .ic{transform:scale(1.08) rotate(-3deg)}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+  a:focus-visible,.btn:focus-visible,.cbox:focus-visible{outline:2px solid var(--a2);outline-offset:3px;border-radius:12px}
+  @media(max-width:860px){.home .cta{justify-content:center}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<nav>
+  <div class="wrap nav">
+    <div class="brand"><img src="logo.png" alt="" class="brandlogo">Riccardo <span>Prisco</span></div>
+    <ul>
+      <li><a href="#about">Profilo</a></li>
+      <li><a href="#projects">Progetto</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#numbers">Numeri</a></li>
+      <li><a href="#contact">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <canvas id="net"></canvas>
+  <div class="wrap heroGrid">
+    <div>
+      <span class="badge"><span class="dot"></span> Portfolio · Automazione, Bot &amp; AI</span>
+      <h1>Ciao, sono <span class="grad">Riccardo Prisco</span>.<br>Costruisco bot che lavorano al posto tuo.</h1>
+      <p class="lead">Automazioni end-to-end: ricerca dati, contatti, comunicazione e AI.
+        Base a Como, attivo tra Italia e Canton Ticino.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Vedi il progetto di punta</a>
+        <a class="btn" href="cv.pdf" download>&#8681; Scarica CV</a>
+        <a class="btn" href="#contact">Contattami</a>
+      </div>
+    </div>
+    <div class="photoWrap reveal in">
+      <div class="photo"><img src="foto.jpg" alt="Foto di Riccardo Prisco"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><b data-count="5">0</b><span>fonti annunci integrate</span></div>
+      <div class="stat reveal d1"><b data-count="3">0</b><span>canali di candidatura</span></div>
+      <div class="stat reveal d2"><b data-count="200" data-suffix="+">0</b><span>invii al giorno (capacità)</span></div>
+      <div class="stat reveal d3"><b data-count="100" data-suffix="%">0</b><span>automatico, end-to-end</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <p class="kicker">Chi sono</p>
+    <h2>Profilo</h2>
+    <p class="lead">Trasformo processi ripetitivi in sistemi automatici e affidabili. Uso Python, API,
+      scraping, modelli AI e strumenti di sistema — con attenzione a qualità, costi e robustezza.</p>
+    <div class="tagrow">
+      <span class="tag">Python</span><span class="tag">Automazione</span><span class="tag">Web scraping</span>
+      <span class="tag">API REST</span><span class="tag">AI / LLM (Gemini)</span><span class="tag">SMTP / IMAP</span>
+      <span class="tag">HTML → PDF</span><span class="tag">Linux / systemd</span><span class="tag">Dashboard</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <p class="kicker">Progetti</p>
+    <h2>Progetto di punta</h2>
+
+    <div class="proj">
+      <h3>Bot API Annunci — candidature automatiche nel Canton Ticino</h3>
+      <p>Sistema completo che <b>trova offerte di lavoro</b>, <b>risale ai contatti</b> delle aziende,
+        <b>genera un curriculum su misura</b> per ogni posizione e <b>invia la candidatura via email</b>,
+        tracciando le risposte. Lavora in autonomia, su più canali e più caselle di posta.</p>
+
+      <img class="shot" src="progetto.jpg" alt="Illustrazione del flusso automatico: robot, email, CV e dashboard" loading="lazy">
+      <p class="kicker" style="margin-top:24px">La pipeline, in 5 fasi</p>
+      <div class="pipe">
+        <div class="step"><div class="n">1</div><b>Scoperta</b><span>Annunci da fonti ufficiali e feed: job-room.ch, careerjet, jobs.ch, RSS tech</span></div>
+        <div class="step"><div class="n">2</div><b>Arricchimento</b><span>Trova sito ed email dell'azienda: ricerca + crawl mirato + IA</span></div>
+        <div class="step"><div class="n">3</div><b>CV su misura</b><span>Curriculum generato con AI e ottimizzato per l'annuncio (ATS)</span></div>
+        <div class="step"><div class="n">4</div><b>Invio</b><span>Email multi-account con limiti giornalieri e pre-check qualità</span></div>
+        <div class="step"><div class="n">5</div><b>Tracking</b><span>Lettura automatica delle risposte e dashboard di riepilogo</span></div>
+      </div>
+
+      <img class="shot" src="dashboard.png" alt="Dashboard del Bot API Annunci con statistiche reali" loading="lazy">
+      <p class="cap">Dashboard reale del bot (dati reali).</p>
+      <div class="grid" style="margin-top:26px">
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
+          <h3>Scoperta multi-fonte</h3><p>API pubbliche e feed RSS: <b>job-room.ch</b> (ufficiale SECO), careerjet, jobs.ch + feed tech svizzeri. Niente browser, niente CAPTCHA.</p></div>
+        <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+          <h3>Arricchimento contatti</h3><p>Trova il sito, esplora le pagine giuste ed estrae l'email con l'IA. Filtro anti-bounce per non sprecare invii.</p></div>
+        <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+          <h3>CV generato con AI</h3><p>Curriculum tagliato sull'annuncio: titolo esatto, parole chiave, esperienze più attinenti — solo dati reali. Output HTML→PDF.</p></div>
+        <div class="card reveal d3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div>
+          <h3>Invio &amp; deliverability</h3><p>Più account con tetto giornaliero, rotazione, blacklist dei rimbalzi e pre-check di oggetto, corpo e allegato.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+          <h3>Affidabilità</h3><p>Gestione quote/rate-limit con cooldown e fallback, circuit breaker, ripresa automatica e riepiloghi per run/giorno/settimana.</p></div>
+        <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Candidature spontanee</h3><p>Oltre agli annunci: a tappeto da database aziende + ricerca web per settore×città, e studi professionali come segreteria/amministrazione.</p></div>
+      </div>
+
+      <div class="tagrow">
+        <span class="tag">Python</span><span class="tag">API</span><span class="tag">Web scraping</span>
+        <span class="tag">Google Gemini</span><span class="tag">LLM</span><span class="tag">SMTP / IMAP</span>
+        <span class="tag">HTML/CSS → PDF</span><span class="tag">systemd</span><span class="tag">Dashboard</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="reveal">
+  <div class="wrap">
+    <p class="kicker">Il curriculum</p>
+    <h2>Un CV su misura, ogni volta</h2>
+    <p class="lead">Niente modelli generici: per ogni annuncio il bot genera un curriculum tagliato sulla posizione
+      (titolo esatto, parole chiave, esperienze più attinenti), ordinato e professionale. Ecco un esempio reale.</p>
+    <img class="shot" src="cv_preview.png" alt="Esempio di curriculum generato automaticamente" loading="lazy">
+  </div>
+</section>
+
+<section id="numbers" class="reveal">
+  <div class="wrap">
+    <p class="kicker">I numeri</p>
+    <h2>Il bot in cifre</h2>
+    <div class="grid">
+      <div class="card"><h3>Copertura</h3>
+        <div class="barlist">
+          <div class="r"><span>Annunci (job-room, careerjet, jobs.ch)</span><span>3 fonti</span><div class="bar"><i data-w="80"></i></div></div>
+          <div class="r"><span>Feed tech svizzeri (swissdevjobs, itjobs)</span><span>2 feed</span><div class="bar"><i data-w="70"></i></div></div>
+          <div class="r"><span>Candidature spontanee (DB + web-query)</span><span>2 vie</span><div class="bar"><i data-w="90"></i></div></div>
+        </div>
+      </div>
+      <div class="card"><h3>Qualità &amp; automazione</h3>
+        <div class="barlist">
+          <div class="r"><span>Pre-check anti-errori (oggetto/corpo/CV)</span><span>sempre attivo</span><div class="bar"><i data-w="100"></i></div></div>
+          <div class="r"><span>CV tagliato sull'annuncio (ATS)</span><span>ogni invio</span><div class="bar"><i data-w="95"></i></div></div>
+          <div class="r"><span>Tracciamento risposte</span><span>automatico</span><div class="bar"><i data-w="85"></i></div></div>
+        </div>
+      </div>
+    </div>
+    <ul class="clean">
+      <li><b>Sempre in funzione</b>: gira pianificato, controlla gli errori e si riprende da solo.</li>
+      <li><b>Sostenibile</b>: usa fonti e API gratuite, ottimizzando la quota, senza costi ricorrenti.</li>
+      <li><b>Misurabile</b>: dashboard con numeri per run, giorno e settimana.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <h2>E poi…</h2>
+    <div class="grid">
+      <div class="card"><h3>Roadmap</h3><p>Nuovi progetti di automazione, strumenti AI e micro-servizi. Questa sezione crescerà.</p></div>
+      <div class="card"><h3>Stack ricorrente</h3><p>Python · API REST · Web scraping · AI/LLM · Automazione processi · Linux · Dashboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="wrap">
+    <p class="kicker">Contatti</p>
+    <h2>Parliamone</h2>
+    <p class="lead">Per collaborazioni o automazioni su misura:</p>
+    <div class="contact">
+      <a class="cbox" href="mailto:riccardoprisco0302@gmail.com">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+        <div><b>Email</b><span>riccardoprisco0302@gmail.com</span></div></a>
+      <a class="cbox" href="tel:+393513617528">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+        <div><b>Telefono</b><span>+39 351 361 7528</span></div></a>
+      <a class="cbox" href="https://wa.me/393513617528" target="_blank" rel="noopener">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg></div>
+        <div><b>WhatsApp</b><span>+39 351 361 7528</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span><img src="logo.png" alt="" class="brandlogo">© <span id="y"></span> Riccardo Prisco — Como (IT) / Canton Ticino (CH)</span>
+    <span>Portfolio statico · nessun tracker · nessuna dipendenza esterna</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function animaContatore(el){
+    var target=parseFloat(el.getAttribute('data-count'))||0, suf=el.getAttribute('data-suffix')||'';
+    var dur=1300, t0=null;
+    function step(ts){
+      if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+      var val=Math.floor(p*target);
+      el.textContent=val+(p>=1?suf:'');
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io2=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ animaContatore(e.target); io2.unobserve(e.target);} });
+  },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){io2.observe(el);});
+
+  var io3=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){
+      e.target.style.width=e.target.getAttribute('data-w')+'%'; io3.unobserve(e.target);} });
+  },{threshold:.4});
+  document.querySelectorAll('.bar i').forEach(function(el){io3.observe(el);});
+})();
+</script>
+<script>
+/* Rete di particelle (canvas puro, nessuna libreria). Rispetta prefers-reduced-motion,
+   riduce le particelle su mobile e mette in pausa quando la scheda non e' visibile. */
+(function(){
+  var c=document.getElementById('net'); if(!c) return;
+  var hero=c.parentElement;
+  var REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var ctx=c.getContext('2d'), W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2), raf=null;
+  var pts=[], mouse={x:-999,y:-999};
+  function resize(){
+    W=c.clientWidth; H=c.clientHeight;
+    c.width=Math.max(1,W*DPR); c.height=Math.max(1,H*DPR); ctx.setTransform(DPR,0,0,DPR,0,0);
+    var n=Math.round((W*H)/13000);
+    n=Math.max(24, Math.min(110, n));
+    if(window.innerWidth<700) n=Math.round(n*0.55);
+    pts=[]; for(var i=0;i<n;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});
+  }
+  var LINK=150;
+  function step(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){
+      var p=pts[i]; p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+      var dx=p.x-mouse.x, dy=p.y-mouse.y, d2=dx*dx+dy*dy;
+      if(d2<110*110 && d2>1){var f=(1-Math.sqrt(d2)/110)*1.2; p.x+=dx*f*0.05; p.y+=dy*f*0.05;}
+      ctx.beginPath(); ctx.arc(p.x,p.y,2.1,0,6.2832); ctx.fillStyle='rgba(165,210,255,.92)'; ctx.fill();
+    }
+    for(var a=0;a<pts.length;a++) for(var b=a+1;b<pts.length;b++){
+      var q=pts[a],r=pts[b], dx=q.x-r.x, dy=q.y-r.y, d=dx*dx+dy*dy;
+      if(d<LINK*LINK){var al=(1-d/(LINK*LINK))*0.55; ctx.strokeStyle='rgba(79,157,255,'+al.toFixed(3)+')'; ctx.lineWidth=1.15; ctx.beginPath(); ctx.moveTo(q.x,q.y); ctx.lineTo(r.x,r.y); ctx.stroke();}
+    }
+    raf=requestAnimationFrame(step);
+  }
+  hero.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top;});
+  hero.addEventListener('mouseleave',function(){mouse.x=mouse.y=-999;});
+  window.addEventListener('resize',function(){resize();});
+  document.addEventListener('visibilitychange',function(){ if(document.hidden){if(raf){cancelAnimationFrame(raf);raf=null;}} else if(!raf){raf=requestAnimationFrame(step);} });
+  resize(); step();
+})();
+</script>
+<button id="top" aria-label="Torna su" title="Torna su">&#8593;</button>
+<script>
+(function(){
+  var prog=document.getElementById('prog'), top=document.getElementById('top');
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    if(prog) prog.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+    if(top) top.classList.toggle('show', window.scrollY>600);
+    var cur='';
+    secs.forEach(function(sec){ if(window.scrollY>=sec.offsetTop-140) cur=sec.id; });
+    links.forEach(function(a){ a.style.color=(a.getAttribute('href')==='#'+cur)?'var(--txt)':''; });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll();
+  if(top) top.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
