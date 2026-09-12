@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<script>document.documentElement.className+=' js';</script>
+<script>document.documentElement.className+=' js';if('scrollRestoration' in history)history.scrollRestoration='manual';addEventListener('load',function(){if(!location.hash)window.scrollTo(0,0);});</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riccardo Prisco — Portfolio · Automazione &amp; AI</title>
@@ -73,6 +73,7 @@
 
   /* FOTO */
   .photoWrap{position:relative;justify-self:center;width:min(340px,72vw);aspect-ratio:1}
+  @media(max-width:860px){.photoWrap{order:-1;margin-bottom:8px}}
   .photoWrap::before{content:"";position:absolute;inset:-6px;border-radius:50%;
     background:conic-gradient(from 0deg,var(--a1),var(--a2),var(--a3),var(--a4),var(--a1));animation:spin 8s linear infinite;filter:blur(1px)}
   @keyframes spin{to{transform:rotate(360deg)}}
