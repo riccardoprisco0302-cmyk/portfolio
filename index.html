@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<script>document.documentElement.className+=' js';if('scrollRestoration' in history)history.scrollRestoration='manual';addEventListener('load',function(){if(!location.hash)window.scrollTo(0,0);});</script>
+<script>document.documentElement.className+=' js';if('scrollRestoration' in history)history.scrollRestoration='manual';(function(){function T(){var h=document.documentElement;var p=h.style.scrollBehavior;h.style.scrollBehavior='auto';window.scrollTo(0,0);h.style.scrollBehavior=p;}T();addEventListener('DOMContentLoaded',T);addEventListener('load',T);addEventListener('pageshow',T);[0,50,150,300,600,1000].forEach(function(t){setTimeout(T,t);});})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riccardo Prisco — Portfolio · Automazione &amp; AI</title>
