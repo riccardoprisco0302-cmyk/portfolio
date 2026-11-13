@@ -9,8 +9,8 @@ h1{font-size:34px;margin:0 0 6px} h2{color:#b9cdf0;margin:36px 0 12px;font-size:
 .kpi{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}
 .kpi div{background:#131e33;border:1px solid #22314d;border-radius:12px;padding:14px 18px;min-width:160px}
 .kpi b{display:block;font-size:26px;color:#fff} .kpi span{color:#8fa6c9;font-size:13px}
-.bar{display:flex;align-items:center;gap:12px;margin:7px 0}
-.lbl{width:300px;flex:none;font-size:14px;color:#c7d7ef}
+.bar{display:flex;align-items:center;gap:10px;margin:4px 0} .bar .track{height:12px}
+.lbl{width:260px;flex:none;font-size:13px;color:#c7d7ef}
 .track{flex:1;height:16px;background:#16213a;border-radius:8px;overflow:hidden}
 .fill{display:block;height:100%}
 .val{width:90px;text-align:right;font-variant-numeric:tabular-nums}
@@ -20,8 +20,8 @@ th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
 .foot{margin-top:34px;color:#6f86a8;font-size:12px}
 .torte{display:flex;gap:34px;flex-wrap:wrap;margin:10px 0}
 .torta-box{flex:1;min-width:300px} .torta-box h3{font-size:15px;color:#9fb6d8;margin:0 0 8px}
-.torta{width:170px;height:170px;border-radius:50%;position:relative;margin:4px auto 12px;box-shadow:0 0 0 1px #22314d}
-.torta .buco{position:absolute;inset:34px;background:#0b1220;border-radius:50%}
+.torta{width:130px;height:130px;border-radius:50%;position:relative;margin:4px auto 12px;box-shadow:0 0 0 1px #22314d}
+.torta .buco{position:absolute;inset:26px;background:#0b1220;border-radius:50%}
 .leg{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:13px}
 .leg li{display:flex;align-items:center;gap:7px;color:#c7d7ef} .leg b{margin-left:auto;color:#fff}
 .leg .p{width:10px;height:10px;border-radius:3px;flex:none}
@@ -82,6 +82,27 @@ th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
 
 <h2>Il sistema in numeri</h2>
 <table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Script Python</td><td>49</td></tr><tr><td>Righe di codice</td><td>32.053</td></tr><tr><td>Fonti di annunci</td><td>10</td></tr><tr><td>Caselle email in rotazione</td><td>4</td></tr><tr><td>Candidature gestite</td><td>oltre 4.500</td></tr><tr><td>CV generati</td><td>5082</td></tr><tr><td>Lavoro trovato tramite il sistema</td><td>oltre 3.200 €</td></tr></tbody></table>
+
+<h2>Risposte per casella</h2>
+<table class=""><thead><tr><th>Casella</th><th>Invii</th><th>Risposte</th><th>%</th></tr></thead><tbody><tr><td>riccardo.prisco.work@gmail.com</td><td>1215</td><td>101</td><td>8.3%</td></tr><tr><td>prisco.riccardo.pro@gmail.com</td><td>1195</td><td>73</td><td>6.1%</td></tr><tr><td>riccardoprisco01@gmail.com</td><td>1194</td><td>96</td><td>8.0%</td></tr><tr><td>r.prisco.work@gmail.com</td><td>1169</td><td>79</td><td>6.8%</td></tr></tbody></table>
+
+<h2>Tempi di risposta</h2>
+<table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Risposte con data utile</td><td>0</td></tr><tr><td>Giorni mediani di risposta</td><td>0</td></tr><tr><td>Più veloce</td><td>—</td></tr><tr><td>Più lenta</td><td>—</td></tr></tbody></table>
+
+<h2>Sottosettori più frequenti (novembre)</h2>
+<div class="bar"><span class="lbl">Non classificato</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">776</span></div><div class="bar"><span class="lbl">Segreteria e back office</span><span class="track"><span class="fill" style="width:96.9%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">752</span></div><div class="bar"><span class="lbl">Manutenzione tecnica e impianti</span><span class="track"><span class="fill" style="width:91.8%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">712</span></div><div class="bar"><span class="lbl">Sviluppo software e IT</span><span class="track"><span class="fill" style="width:79.9%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">620</span></div><div class="bar"><span class="lbl">Vendita al dettaglio e cassa</span><span class="track"><span class="fill" style="width:53.6%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">416</span></div><div class="bar"><span class="lbl">Vendita B2B e field sales</span><span class="track"><span class="fill" style="width:53.5%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">415</span></div><div class="bar"><span class="lbl">Sala, bar e servizio</span><span class="track"><span class="fill" style="width:53.1%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">412</span></div><div class="bar"><span class="lbl">Cucina</span><span class="track"><span class="fill" style="width:51.3%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">398</span></div><div class="bar"><span class="lbl">Muratura e opere edili</span><span class="track"><span class="fill" style="width:48.6%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">377</span></div><div class="bar"><span class="lbl">Sanitario, cura e sociale</span><span class="track"><span class="fill" style="width:48.6%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">377</span></div><div class="bar"><span class="lbl">Marketing, web e social</span><span class="track"><span class="fill" style="width:32.9%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">255</span></div><div class="bar"><span class="lbl">Magazzino e movimentazione</span><span class="track"><span class="fill" style="width:30.8%;background:linear-gradient(90deg,#14b8a6,#4f9cf9)"></span></span><span class="val">239</span></div>
+
+<h2>Domini con più bounce</h2>
+<table class=""><thead><tr><th>Dominio</th><th>Bounce</th></tr></thead><tbody><tr><td>zentiva.ch</td><td>9</td></tr><tr><td>gmail.com</td><td>9</td></tr><tr><td>vans.com</td><td>8</td></tr><tr><td>comparis.ch</td><td>6</td></tr><tr><td>data.org</td><td>5</td></tr><tr><td>autoscuolacamerlatese.com</td><td>4</td></tr><tr><td>sentry.globoi.com</td><td>4</td></tr><tr><td>ecoprocess.com</td><td>4</td></tr><tr><td>dsv.com</td><td>4</td></tr><tr><td>activenetwork.com</td><td>4</td></tr></tbody></table>
+
+<h2>Telefonate per mese</h2>
+<div class="bar"><span class="lbl">10/2026</span><span class="track"><span class="fill" style="width:88.9%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">8</span></div><div class="bar"><span class="lbl">11/2026</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">9</span></div>
+
+<h2>Test di deliverability (12/11/2026)</h2>
+<table class=""><thead><tr><th>Destinazione</th><th>Inbox</th><th>Spam</th></tr></thead><tbody><tr><td>Gmail</td><td>2</td><td>2</td></tr><tr><td>Yahoo</td><td>2</td><td>2</td></tr><tr><td>Outlook</td><td>da leggere</td><td></td></tr></tbody></table>
+
+<h2>Dimensione del sistema</h2>
+<table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Aziende in rubrica</td><td>3761</td></tr><tr><td>Indirizzi in blacklist bounce</td><td>498</td></tr><tr><td>Domini con bounce</td><td>400</td></tr><tr><td>CV generati</td><td>5082</td></tr><tr><td>Candidature gestite</td><td>oltre 4.500</td></tr><tr><td>Lavoro trovato tramite il sistema</td><td>oltre 3.200 €</td></tr></tbody></table>
 
 <h2>Come funziona (in breve)</h2>
 <p>10 fonti di annunci · 3 livelli di filtro (zona, veti, IA) · arricchimento contatti con
