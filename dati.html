@@ -1,43 +1,74 @@
 <!DOCTYPE html><html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bot di candidature automatiche — dati</title>
+<title>Bot di candidature — tutti i dati</title>
 <style>
 :root{color-scheme:dark}
 body{margin:0;padding:36px;background:#0b1220;color:#e6eefc;font:16px/1.55 system-ui,sans-serif}
-h1{font-size:34px;margin:0 0 6px} h2{color:#b9cdf0;margin:34px 0 12px;font-size:20px}
+h1{font-size:34px;margin:0 0 6px} h2{color:#b9cdf0;margin:36px 0 12px;font-size:20px}
 .sub{color:#8fa6c9;margin:0 0 24px} .sub a{color:#7cc4ff}
 .kpi{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}
 .kpi div{background:#131e33;border:1px solid #22314d;border-radius:12px;padding:14px 18px;min-width:160px}
 .kpi b{display:block;font-size:26px;color:#fff} .kpi span{color:#8fa6c9;font-size:13px}
 .bar{display:flex;align-items:center;gap:12px;margin:7px 0}
-.lbl{width:280px;flex:none;font-size:14px;color:#c7d7ef}
+.lbl{width:300px;flex:none;font-size:14px;color:#c7d7ef}
 .track{flex:1;height:16px;background:#16213a;border-radius:8px;overflow:hidden}
-.fill{display:block;height:100%;background:linear-gradient(90deg,#4f9cf9,#22c55e)}
-.val{width:70px;text-align:right;font-variant-numeric:tabular-nums}
+.fill{display:block;height:100%}
+.val{width:90px;text-align:right;font-variant-numeric:tabular-nums}
 table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
 th,td{padding:8px;border-bottom:1px solid #1e2c47;text-align:left}
 th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
 .foot{margin-top:34px;color:#6f86a8;font-size:12px}
+.col2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:820px){.col2{grid-template-columns:1fr}.lbl{width:180px}}
 </style></head><body>
-<h1>Bot di candidature automatiche</h1>
-<p class="sub">Cerca, valuta, scrive il CV, invia, legge le risposte e gestisce i colloqui ·
-<a href="https://riccardoprisco0302-cmyk.github.io/portfolio/">https://riccardoprisco0302-cmyk.github.io/portfolio/</a></p>
+<h1>Bot di candidature automatiche — tutti i dati</h1>
+<p class="sub">Cerca, valuta, scrive il CV, invia, legge le risposte · <a href="https://riccardoprisco0302-cmyk.github.io/portfolio/">https://riccardoprisco0302-cmyk.github.io/portfolio/</a></p>
+
 <div class="kpi">
-  <div><b>4.594</b><span>candidature inviate</span></div>
-  <div><b>7,2%</b><span>tasso di risposta</span></div>
-  <div><b>62%</b><span>telefonate → colloquio</span></div>
-  <div><b>83,3%</b><span>aziende con email trovata</span></div>
-  <div><b>100%</b><span>email con dominio valido</span></div>
+  <div><b>4773</b><span>candidature inviate</span></div>
+  <div><b>5082</b><span>CV generati</span></div>
+  <div><b>7.3%</b><span>tasso di risposta</span></div>
+  <div><b>63.3%</b><span>aziende con email trovata</span></div>
+  <div><b>17</b><span>chiamate gestite</span></div>
+  <div><b>65%</b><span>chiamate → colloquio</span></div>
 </div>
-<h2>Settori del mercato (annunci reali, novembre)</h2>
-<div class="bar"><span class="lbl">Industria e Produzione</span><span class="track"><span class="fill" style="width:17.4%"></span></span><span class="val">17.4%</span></div><div class="bar"><span class="lbl">Ristorazione e Hotellerie</span><span class="track"><span class="fill" style="width:13.0%"></span></span><span class="val">13.0%</span></div><div class="bar"><span class="lbl">Amministrazione, Finanza e HR</span><span class="track"><span class="fill" style="width:11.6%"></span></span><span class="val">11.6%</span></div><div class="bar"><span class="lbl">Edilizia e Costruzioni</span><span class="track"><span class="fill" style="width:11.2%"></span></span><span class="val">11.2%</span></div><div class="bar"><span class="lbl">Commercio e Vendita</span><span class="track"><span class="fill" style="width:10.4%"></span></span><span class="val">10.4%</span></div><div class="bar"><span class="lbl">IT e Digitale</span><span class="track"><span class="fill" style="width:10.1%"></span></span><span class="val">10.1%</span></div><div class="bar"><span class="lbl">Logistica e Trasporti</span><span class="track"><span class="fill" style="width:6.2%"></span></span><span class="val">6.2%</span></div><div class="bar"><span class="lbl">Sanità, Farmacia e Sociale</span><span class="track"><span class="fill" style="width:4.6%"></span></span><span class="val">4.6%</span></div>
-<h2>Da dove arrivano i risultati</h2>
-<table><thead><tr><th>Canale</th><th class="num">Contattate</th><th class="num">Assunzioni</th><th class="num">%</th></tr></thead>
-<tbody><tr><td>Annunci</td><td class='num'>552</td><td class='num'>3</td><td class='num'>0,54%</td></tr><tr><td>Spontanee</td><td class='num'>2208</td><td class='num'>1</td><td class='num'>0,05%</td></tr><tr><td>Web query</td><td class='num'>1405</td><td class='num'>0</td><td class='num'>0%</td></tr></tbody></table>
-<h2>Come funziona</h2>
-<p>10 fonti di annunci · 3 livelli di filtro · arricchimento contatti con verifica MX ·
-CV su misura generato con IA (HTML → PDF) · invio da 4 caselle in rotazione con tetti ·
-anti-spam (blacklist bounce, dedup, test deliverability) · lettura risposte via IMAP e
-classificazione · colloqui in Google Calendar · report e comandi da Telegram.</p>
+
+<h2>Invii per mese</h2>
+<div class="bar"><span class="lbl">09/2026</span><span class="track"><span class="fill" style="width:43.5%;background:linear-gradient(90deg,#4f9cf9,#22c55e)"></span></span><span class="val">899</span></div><div class="bar"><span class="lbl">10/2026</span><span class="track"><span class="fill" style="width:87.2%;background:linear-gradient(90deg,#4f9cf9,#22c55e)"></span></span><span class="val">1805</span></div><div class="bar"><span class="lbl">11/2026</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#4f9cf9,#22c55e)"></span></span><span class="val">2069</span></div>
+
+<h2>Da dove arrivano i contatti</h2>
+<div class="bar"><span class="lbl">SPONTANEA_LINDAS</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#a78bfa,#f472b6)"></span></span><span class="val">2370</span></div><div class="bar"><span class="lbl">WEB_QUERY</span><span class="track"><span class="fill" style="width:62.5%;background:linear-gradient(90deg,#a78bfa,#f472b6)"></span></span><span class="val">1482</span></div><div class="bar"><span class="lbl">ANNUNCI</span><span class="track"><span class="fill" style="width:32.7%;background:linear-gradient(90deg,#a78bfa,#f472b6)"></span></span><span class="val">775</span></div><div class="bar"><span class="lbl">?</span><span class="track"><span class="fill" style="width:6.2%;background:linear-gradient(90deg,#a78bfa,#f472b6)"></span></span><span class="val">146</span></div>
+
+<h2>Le 4 caselle in rotazione</h2>
+<div class="bar"><span class="lbl">riccardo.prisco.work@gmail.com</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></span></span><span class="val">1215</span></div><div class="bar"><span class="lbl">prisco.riccardo.pro@gmail.com</span><span class="track"><span class="fill" style="width:98.4%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></span></span><span class="val">1195</span></div><div class="bar"><span class="lbl">riccardoprisco01@gmail.com</span><span class="track"><span class="fill" style="width:98.3%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></span></span><span class="val">1194</span></div><div class="bar"><span class="lbl">r.prisco.work@gmail.com</span><span class="track"><span class="fill" style="width:96.2%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></span></span><span class="val">1169</span></div>
+
+<div class="col2">
+  <div>
+    <h2>Risposte per categoria</h2>
+    <div class="bar"><span class="lbl">RIFIUTO</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">233</span></div><div class="bar"><span class="lbl">PIATTAFORMA</span><span class="track"><span class="fill" style="width:15.0%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">35</span></div><div class="bar"><span class="lbl">INTERESSATI</span><span class="track"><span class="fill" style="width:11.2%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">26</span></div><div class="bar"><span class="lbl">COLLOQUIO</span><span class="track"><span class="fill" style="width:7.3%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">17</span></div><div class="bar"><span class="lbl">ALTRO</span><span class="track"><span class="fill" style="width:7.3%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">17</span></div><div class="bar"><span class="lbl">RICHIESTA_INFO</span><span class="track"><span class="fill" style="width:6.4%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">15</span></div><div class="bar"><span class="lbl">-</span><span class="track"><span class="fill" style="width:2.6%;background:linear-gradient(90deg,#06b6d4,#4f9cf9)"></span></span><span class="val">6</span></div>
+  </div>
+  <div>
+    <h2>Telefonate per settimana</h2>
+    <div class="bar"><span class="lbl">2026-W41</span><span class="track"><span class="fill" style="width:50.0%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">3</span></div><div class="bar"><span class="lbl">2026-W42</span><span class="track"><span class="fill" style="width:50.0%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">3</span></div><div class="bar"><span class="lbl">2026-W43</span><span class="track"><span class="fill" style="width:33.3%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">2</span></div><div class="bar"><span class="lbl">2026-W45</span><span class="track"><span class="fill" style="width:50.0%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">3</span></div><div class="bar"><span class="lbl">2026-W46</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#22c55e,#84cc16)"></span></span><span class="val">6</span></div>
+  </div>
+</div>
+
+<h2>Qualità dell'arricchimento (novembre)</h2>
+<table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Aziende provate</td><td>1908</td></tr><tr><td>Email trovate</td><td>1208</td></tr><tr><td>Successo</td><td>63.3%</td></tr><tr><td>Email con dominio valido (MX)</td><td>100%</td></tr></tbody></table>
+
+<h2>Anti-spam e reputazione</h2>
+<table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Indirizzi in blacklist bounce</td><td>498</td></tr><tr><td>Domini con bounce</td><td>400</td></tr><tr><td>Tasso di bounce</td><td>10.4%</td></tr><tr><td>Caselle in rotazione</td><td>4</td></tr><tr><td>Varianti di oggetto/testo</td><td>oltre 20</td></tr><tr><td>Tetto per casella per run</td><td>4 invii</td></tr></tbody></table>
+
+<h2>Il mercato del lavoro (annunci reali, novembre)</h2>
+<p class="sub">9187 annunci analizzati · 214 località</p>
+<div class="bar"><span class="lbl">Lugano</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">1246</span></div><div class="bar"><span class="lbl">Bellinzona</span><span class="track"><span class="fill" style="width:58.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">733</span></div><div class="bar"><span class="lbl">Locarno</span><span class="track"><span class="fill" style="width:57.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">720</span></div><div class="bar"><span class="lbl">Mendrisio</span><span class="track"><span class="fill" style="width:37.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">471</span></div><div class="bar"><span class="lbl">Stabio</span><span class="track"><span class="fill" style="width:37.2%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">464</span></div><div class="bar"><span class="lbl">Ticino</span><span class="track"><span class="fill" style="width:24.4%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">304</span></div><div class="bar"><span class="lbl">Chiasso</span><span class="track"><span class="fill" style="width:20.2%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">252</span></div><div class="bar"><span class="lbl">Losone</span><span class="track"><span class="fill" style="width:19.3%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">240</span></div><div class="bar"><span class="lbl">Ascona</span><span class="track"><span class="fill" style="width:18.7%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">233</span></div><div class="bar"><span class="lbl">Quartino</span><span class="track"><span class="fill" style="width:14.3%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">178</span></div>
+
+<h2>Come funziona (in breve)</h2>
+<p>10 fonti di annunci · 3 livelli di filtro (zona, veti, IA) · arricchimento contatti con
+verifica MX · CV su misura generato con IA (HTML → PDF) · invio da 4 caselle in rotazione
+con tetti e varianti · anti-spam (blacklist bounce, deduplicazione, test di deliverability) ·
+lettura risposte via IMAP e classificazione · colloqui in Google Calendar · report e comandi
+da Telegram.</p>
+
 <p class="foot">Dati misurati dal sistema · aggiornato 13/11/2026</p>
 </body></html>
