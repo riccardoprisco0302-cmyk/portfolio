@@ -18,6 +18,13 @@ table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
 th,td{padding:8px;border-bottom:1px solid #1e2c47;text-align:left}
 th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
 .foot{margin-top:34px;color:#6f86a8;font-size:12px}
+.torte{display:flex;gap:34px;flex-wrap:wrap;margin:10px 0}
+.torta-box{flex:1;min-width:300px} .torta-box h3{font-size:15px;color:#9fb6d8;margin:0 0 8px}
+.torta{width:170px;height:170px;border-radius:50%;position:relative;margin:4px auto 12px;box-shadow:0 0 0 1px #22314d}
+.torta .buco{position:absolute;inset:34px;background:#0b1220;border-radius:50%}
+.leg{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:13px}
+.leg li{display:flex;align-items:center;gap:7px;color:#c7d7ef} .leg b{margin-left:auto;color:#fff}
+.leg .p{width:10px;height:10px;border-radius:3px;flex:none}
 .col2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 @media(max-width:820px){.col2{grid-template-columns:1fr}.lbl{width:180px}}
 </style></head><body>
@@ -31,6 +38,13 @@ th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
   <div><b>63.3%</b><span>aziende con email trovata</span></div>
   <div><b>17</b><span>chiamate gestite</span></div>
   <div><b>65%</b><span>chiamate → colloquio</span></div>
+</div>
+
+<h2>Panoramica</h2>
+<div class="torte">
+  <div class="torta-box"><h3>Da dove arrivano i contatti</h3><div class="torta" style="background:conic-gradient(#4f9cf9 0.00% 49.65%,#22c55e 49.65% 80.70%,#f59e0b 80.70% 96.94%,#ef4444 96.94% 100.00%)"><span class="buco"></span></div><ul class="leg"><li><span class="p" style="background:#4f9cf9"></span>SPONTANEA_LINDAS <b>49.7%</b></li><li><span class="p" style="background:#22c55e"></span>WEB_QUERY <b>31.0%</b></li><li><span class="p" style="background:#f59e0b"></span>ANNUNCI <b>16.2%</b></li><li><span class="p" style="background:#ef4444"></span>? <b>3.1%</b></li></ul></div>
+  <div class="torta-box"><h3>Risposte per categoria</h3><div class="torta" style="background:conic-gradient(#4f9cf9 0.00% 67.93%,#22c55e 67.93% 78.13%,#f59e0b 78.13% 85.71%,#ef4444 85.71% 90.67%,#a855f7 90.67% 95.63%,#06b6d4 95.63% 100.00%)"><span class="buco"></span></div><ul class="leg"><li><span class="p" style="background:#4f9cf9"></span>RIFIUTO <b>67.9%</b></li><li><span class="p" style="background:#22c55e"></span>PIATTAFORMA <b>10.2%</b></li><li><span class="p" style="background:#f59e0b"></span>INTERESSATI <b>7.6%</b></li><li><span class="p" style="background:#ef4444"></span>COLLOQUIO <b>5.0%</b></li><li><span class="p" style="background:#a855f7"></span>ALTRO <b>5.0%</b></li><li><span class="p" style="background:#06b6d4"></span>RICHIESTA_INFO <b>4.4%</b></li></ul></div>
+  <div class="torta-box"><h3>Settori del mercato</h3><div class="torta" style="background:conic-gradient(#4f9cf9 0.00% 23.89%,#22c55e 23.89% 41.44%,#f59e0b 41.44% 56.85%,#ef4444 56.85% 72.07%,#a855f7 72.07% 86.06%,#06b6d4 86.06% 100.00%)"><span class="buco"></span></div><ul class="leg"><li><span class="p" style="background:#4f9cf9"></span>Industria e Produzione <b>23.9%</b></li><li><span class="p" style="background:#22c55e"></span>Ristorazione e Hotellerie <b>17.6%</b></li><li><span class="p" style="background:#f59e0b"></span>Amministrazione, Finanza e HR <b>15.4%</b></li><li><span class="p" style="background:#ef4444"></span>Edilizia e Costruzioni <b>15.2%</b></li><li><span class="p" style="background:#a855f7"></span>IT e Digitale <b>14.0%</b></li><li><span class="p" style="background:#06b6d4"></span>Commercio e Vendita <b>13.9%</b></li></ul></div>
 </div>
 
 <h2>Invii per mese</h2>
@@ -62,6 +76,12 @@ th{color:#8fa6c9} td.num{text-align:right;font-variant-numeric:tabular-nums}
 <h2>Il mercato del lavoro (annunci reali, novembre)</h2>
 <p class="sub">9187 annunci analizzati · 214 località</p>
 <div class="bar"><span class="lbl">Lugano</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">1246</span></div><div class="bar"><span class="lbl">Bellinzona</span><span class="track"><span class="fill" style="width:58.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">733</span></div><div class="bar"><span class="lbl">Locarno</span><span class="track"><span class="fill" style="width:57.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">720</span></div><div class="bar"><span class="lbl">Mendrisio</span><span class="track"><span class="fill" style="width:37.8%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">471</span></div><div class="bar"><span class="lbl">Stabio</span><span class="track"><span class="fill" style="width:37.2%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">464</span></div><div class="bar"><span class="lbl">Ticino</span><span class="track"><span class="fill" style="width:24.4%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">304</span></div><div class="bar"><span class="lbl">Chiasso</span><span class="track"><span class="fill" style="width:20.2%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">252</span></div><div class="bar"><span class="lbl">Losone</span><span class="track"><span class="fill" style="width:19.3%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">240</span></div><div class="bar"><span class="lbl">Ascona</span><span class="track"><span class="fill" style="width:18.7%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">233</span></div><div class="bar"><span class="lbl">Quartino</span><span class="track"><span class="fill" style="width:14.3%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)"></span></span><span class="val">178</span></div>
+
+<h2>Bounce per mese (qualità della consegna)</h2>
+<div class="bar"><span class="lbl">10/2026</span><span class="track"><span class="fill" style="width:45.9%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></span></span><span class="val">67</span></div><div class="bar"><span class="lbl">11/2026</span><span class="track"><span class="fill" style="width:100.0%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></span></span><span class="val">146</span></div>
+
+<h2>Il sistema in numeri</h2>
+<table class=""><thead><tr><th>Indicatore</th><th>Valore</th></tr></thead><tbody><tr><td>Script Python</td><td>49</td></tr><tr><td>Righe di codice</td><td>32.053</td></tr><tr><td>Fonti di annunci</td><td>10</td></tr><tr><td>Caselle email in rotazione</td><td>4</td></tr><tr><td>Candidature gestite</td><td>oltre 4.500</td></tr><tr><td>CV generati</td><td>5082</td></tr><tr><td>Lavoro trovato tramite il sistema</td><td>oltre 3.200 €</td></tr></tbody></table>
 
 <h2>Come funziona (in breve)</h2>
 <p>10 fonti di annunci · 3 livelli di filtro (zona, veti, IA) · arricchimento contatti con
